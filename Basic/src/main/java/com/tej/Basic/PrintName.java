@@ -1,6 +1,8 @@
 package com.tej.Basic;
 
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -30,8 +32,16 @@ public class PrintName {
 
     //search user into the local db(Map)
     @GetMapping("id/{id}")
-    public UserName getDataById(@PathVariable Long id){
-        return userName.get(id);
+    public ResponseEntity<UserName> getDataById(@PathVariable Long id){
+        try {
+            UserName name = userName.get(id);
+            return new ResponseEntity<>(name, HttpStatus.OK);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+//        return userName.get(id);
     }
 
 // update user into the local DB (Map)
