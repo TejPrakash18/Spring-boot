@@ -1,0 +1,5 @@
+testName,method,url,name,email,expectedStatus
+Create User,POST,/users,John Doe,john.doe@example.com,201
+Get User by ID,GET,/users/1,,,200
+Update User,PUT,/users/1,John Updated,john.updated@example.com,200
+Delete User,DELETE,/users/1,,,204
