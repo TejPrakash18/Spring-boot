@@ -1,13 +1,13 @@
-package com.tejUpadhyay.SpringDataJPA;
+package com.tej.BookManagement;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringDataJpaApplication {
+public class BookManagement {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringDataJpaApplication.class, args);
+		SpringApplication.run(BookManagement.class, args);
 	}
 
 }

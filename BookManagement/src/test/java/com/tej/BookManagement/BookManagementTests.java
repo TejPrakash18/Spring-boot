@@ -1,10 +1,10 @@
-package com.tejUpadhyay.SpringDataJPA;
+package com.tej.BookManagement;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringDataJpaApplicationTests {
+class BookManagementTests {
 
 	@Test
 	void contextLoads() {
