@@ -18,7 +18,4 @@ public class Book {
     private String author;
     private String isbn;
     private Double price;
-
-    @Version
-    private Integer version;
 }

@@ -21,7 +21,7 @@ public class BookController {
     @GetMapping
     public ResponseEntity<List<Book>> getAllBook(){
         List<Book> books = bookServiceImp.getAllBooks();
-        return ResponseEntity.ok(books);
+        return ResponseEntity.ok(books); // 200 ok
     }
 
     @GetMapping("/{id}")
@@ -50,10 +50,10 @@ public class BookController {
         Book book = bookServiceImp.getBookById(id);
         if (book != null) {
             bookServiceImp.deleteBook(id);
-            return ResponseEntity.ok("Book with ID " + id + " deleted successfully.");
+            return ResponseEntity.ok("Book with ID " + id + " deleted successfully.");  // 200 ok
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                    .body("Book with ID " + id + " not found.");
+                    .body("Book with ID " + id + " not found.");   //404 not found
         }
     }
 
